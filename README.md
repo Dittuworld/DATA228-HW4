@@ -5,7 +5,7 @@ In this assignment we are building a Customer Ticketing application using Amazon
  ## 1.	Create AWS Cloud9 Environment
 
 ![diagram1](images/00-c9-01.png)
-![diagram1](mages/00-c9-02.png)
+![diagram1](images/00-c9-02.png)
 ![diagram1](images/00-c9-03.png)
 ![diagram1](images/00-c9-04.png)
 
