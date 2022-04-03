@@ -32,61 +32,94 @@ We will also create the IAM polices, and roles required by these components.
 IAM policy console-  Create one policy (TicketGetPolicy)
 
 ![diagram1](API_IMAGES/policy1.png)
+
 ![diagram1](API_IMAGES/policy2.png)
+
 ![diagram1](API_IMAGES/policy3.png)
+
 ![diagram1](API_IMAGES/policy4.png)
 
 Next, create the 2 roles-
 
 ![diagram1](API_IMAGES/role1.png)
+
 ![diagram1](API_IMAGES/role2.png)
+
 ![diagram1](API_IMAGES/role3.png)
+
 ![diagram1](API_IMAGES/role4.png)
+
 ![diagram1](API_IMAGES/role5.png)
 
 # 2. Create the DynamoDB Global Table-
 
 ![diagram1](API_IMAGES/dynamo1.png)
+
 ![diagram1](API_IMAGES/dynamo2.png)
+
 ![diagram1](API_IMAGES/dynamo3.png)
+
 ![diagram1](API_IMAGES/dynamo4.png)
+
 ![diagram1](API_IMAGES/dynamo5.png)
 
 # 3.	Create three Lambda functions-
 
 ![diagram1](API_IMAGES/lambda1.png)
+
 ![diagram1](API_IMAGES/lambda2.png)
+
 ![diagram1](API_IMAGES/lambda3.png)
+
 ![diagram1](API_IMAGES/lambda4.png)
+
 ![diagram1](API_IMAGES/lambda5.png)
 
 # 4.	Create API Gateway Endpoint-
 ![diagram1](API_IMAGES/api1.png)
+
 ![diagram1](API_IMAGES/api2.png)
+
 ![diagram1](API_IMAGES/api3.png)
+
 ![diagram1](API_IMAGES/api4.png)
+
 ![diagram1](API_IMAGES/api5.png)
+
 ![diagram1](API_IMAGES/api6.png)
+
 ![diagram1](API_IMAGES/api7.png)
+
 ![diagram1](API_IMAGES/api8.png)
+
 ![diagram1](API_IMAGES/api9.png)
 
 # 5.	Test your API Gateway Endpoints-
 
 ![diagram1](API_IMAGES/test1.png)
+
 ![diagram1](API_IMAGES/test2.png)
+
 ![diagram1](API_IMAGES/test3.png)
+
 ![diagram1](API_IMAGES/test4.png)
 
 ##  3.	Build a UI layer
 
 ![diagram1](API_IMAGES/ui1.png)
+
 ![diagram1](API_IMAGES/ui2.png)
+
 ![diagram1](API_IMAGES/ui3.png)
+
 ![diagram1](API_IMAGES/ui4.png)
+
 ![diagram1](API_IMAGES/ui5.png)
+
 ![diagram1](API_IMAGES/ui6.png)
+
 ![diagram1](API_IMAGES/ui7.png)
+
 ![diagram1](API_IMAGES/ui8.png)
 
 ## 4. Replicate to second region- 
@@ -101,6 +134,7 @@ aws s3api put-bucket-versioning --bucket ticket-service-ui-websitebucket-11zvklq
 aws s3api create-bucket --bucket ticket-service-ui-websitebucket-us-west-1 --region us-west-1 --create-bucket-configuration LocationConstraint=us-west-1
 
 •	Created an IAM role and attached permissions policy to the role:
+
 ![diagram1](API_IMAGES/replicate1.png)
 
 •	Added replication configuration to the source bucket. Run the following command to add the replication configuration to your source bucket. 
@@ -120,4 +154,5 @@ Test CloudFront Failover: To test the CloudFront Failover, we deleted the S3 buc
 We checked the multi-region active-active ticketing system works perfectly though the primary region (N. Virginia) has an issue in S3 or API gateway.
 
 ![diagram1](API_IMAGES/replicate4.png)
+
 ![diagram1](API_IMAGES/replicate5.png)
